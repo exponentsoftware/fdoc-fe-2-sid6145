@@ -1,16 +1,70 @@
-# Day 7
+# Getting Started with Create React App
 
-## Spotify: Add album and lifting up the state
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### 1. Add Album
-- a. Create a component called `AddAlbum` which renders 2 input( text ) fields for `album_title` and `artist` and 1 upload field for `album_cover`. Insert this `AddAlbum` component in the render output of `App` Component.  
-- b. Add change event listeners on each input and on change set each of the values in state of `AddAlbum`  
-- c. Add a submit event listener to `AddAlbum`. Make sure you set it on a 'form' element. Inside the submit event handler create an object which will have an 'id' (which should be incremented on each insert), 'artist', 'album' and 'cover' property taken from state which was set in step 2.
-> User [Imgur](https://api.imgur.com/endpoints/image/) or any other similar API to upload an image and get the url. Store the image url in an Array once it is uploaded
-### 2. Uplifting the state
-- a. Create a receiver method in `App` and pass it to `AddAlbum` as props. Inside the submit handler of `AddAlbum`, call the receiver function prop and pass in the album object created in previous step.
-- b. Add functionality to receiver method in `App` to add the album object passed in to the albums array in state of `App` created in the previous challenge ( Day 6 )
-- c. Add a delete method to `App` component and pass it to `Albums` as props and from `Albums` pass it to each `Album` component as props.
-- d. Add a delete button to `Album` component and an event handler to listen for click events. Inside the click handler call the delete method in props and pass in the id of current album.
-- e. Implement the functionality of delete method in `App` by filtering out the album from the array in state which has the id received by the method.
-> Implement components which do not implement state as functional components
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,0 +1,27 @@
+.addAlbum-container{
+    display: flex;
+    justify-content: center;
+}
+
+.form{
+    width: 300px;
+    margin-top: 50px;
+    padding: 20px 25px;
+    background-color: #264653;
+    font-size: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgb(68, 68, 68);
+}
+
+.add-btn{
+    width: 100%;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #3fee6b;
+    margin-top: 10px;
+    
+
+}
