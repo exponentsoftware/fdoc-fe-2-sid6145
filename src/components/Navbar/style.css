@@ -1,0 +1,22 @@
+.navbar-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: tomato;
+    color: white;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    font-size: 20px;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: white;
+}

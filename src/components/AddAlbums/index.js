@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { storage } from "../../firebase-config";
 import "./style.css";
 
@@ -7,9 +7,12 @@ function AddAlbums({ handleAddAlbum }) {
   const [title, setTitle] = useState("");
   const [artist, setArtist] = useState("");
   const [cover, setCover] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setLoading(true)
 
     const uploadTask = storage.ref(`images/${cover.name}`).put(cover);
     uploadTask.on(
@@ -30,10 +33,15 @@ function AddAlbums({ handleAddAlbum }) {
               artist: artist,
               image: url,
             };
+            
+            if(url){
+              setLoading(false)
+            }
 
+            
             handleAddAlbum(newAlbum);
 
-            alert("success")
+            
             setTitle("");
             setArtist("");
             setCover(null);
@@ -43,7 +51,10 @@ function AddAlbums({ handleAddAlbum }) {
   };
 
   return (
+    <>
+    
     <div className="addAlbum-container">
+    
       <Form className="form">
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Album Title</Form.Label>
@@ -75,6 +86,9 @@ function AddAlbums({ handleAddAlbum }) {
         </button>
       </Form>
     </div>
+    {loading == true ? <img className="loading" src='images/loading.gif' alt="loading gif" /> : "" }
+
+    </>
   );
 }
 
